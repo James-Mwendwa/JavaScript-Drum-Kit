@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Montagu Slab', serif;
+}
+
+.container {
+    font-size: 2rem;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 6rem;
+    margin-top: 10rem;
+    
+}
+
+.key {
+    background-color: green;
+    padding: 5px 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
