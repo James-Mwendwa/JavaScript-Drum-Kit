@@ -1,9 +1,27 @@
 let keys = document.querySelectorAll('.drum');
 
 
+
+const handleClick = (e) => {
+  let innerHTML = e.target.innerHTML;
+
+  animate(innerHTML);
+  sound(innerHTML);
+};
+
+
+// pass through the keys
+for (let i = 0; i < keys.length; i++) {
+
+    keys[i].addEventListener('click', handleClick);
+}
+
+
+
+
 const animate = (key) => {
 
-    let currentKey = document.querySelector('.$(key)');
+    let currentKey = document.querySelector(`.${key}`);
     
     currentKey.classList.add('pressed');
 
@@ -19,6 +37,8 @@ const playMusic = (path) => {
     audio.play();
 }
 
+// executes when you press keyboard keys
+
 document.addEventListener("keypress", (e) => {
     const pressedKey = e.key;
     animate(pressedKey);
@@ -31,39 +51,39 @@ document.addEventListener("keypress", (e) => {
 const sound = (key) => {
     switch (key) {
       case "Q":
-        playMusic("");
+        playMusic("Sounds/sound 1.mp3");
         break;
 
       case "W":
-        playMusic();
+        playMusic("Sounds/sound 2.mp3");
         break;
 
       case "E":
-        playMusic();
+        playMusic("Sounds/sound 3.mp3");
         break;
 
       case "A":
-        playMusic();
+        playMusic("Sounds/sound 4.mp3");
         break;
 
       case "S":
-        playMusic();
+        playMusic("Sounds/sound 5.mp3");
         break;
 
       case "D":
-        playMusic();
+        playMusic("Sounds/sound 6.mp3");
         break;
 
       case "X":
-        playMusic();
+        playMusic("Sounds/sound 7.mp3");
         break;
 
       case "Z":
-        playMusic();
+        playMusic("Sounds/sound 8.mp3");
         break;
 
       case "C":
-        playMusic();
+        playMusic("Sounds/sound 9.mp3");
         break;
 
         default:
@@ -75,17 +95,3 @@ const sound = (key) => {
 
 
 
-const handleClick = (e) => {
- 
-    let innerHTML = e.target.innerHTML;
-    
-    animate(innerHTML);
-    sound(innerHTML);
-}
-
-
-// pass through the keys
-for (let i = 0; i < keys.length; i++) {
-
-    keys[i].addEventListener('click', handleClick);
-}
